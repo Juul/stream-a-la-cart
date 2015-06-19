@@ -147,7 +147,7 @@ You'll need a flash video player for the client side streaming. There are a few 
 
 I really do not recommend using flow player. It's open source but they limit the free version to 4 minute videos and overlay their logo. You can edit the source code to remove these limitations and recompile it, but that's a huge hassle and they know it. Fuck 'em. Use a fork of flowplayer if f4player isn't good enough for you.
 
-## RTMP script injection ==
+## RTMP script injection
 
 Even though RTMP is non-open and therefore sucks, an interesting feature is that it can contain arbitrary actionscript objects that are time-synchronized and trigger javascript function calls in the user's web browser, providing the ability for slide change events, chat transcripts or annotations to be saved as part of the stream and replayed. 
 
