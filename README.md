@@ -48,17 +48,13 @@ There are three basic ways of tackling encoding:
 
 These are all encoders that can take a HDMI input, encode it using H.264 and send an RTMP stream over ethernet to a user-specified RTMP server. Some or all of these may rely on cloud services to be configured (need to investigate).
 
-* Teradek VidiU - $700
-** Up to 1080p
-* Cerevo LiveShell - $250
-** SD quality only
-* Cerevo LiveShell Pro - $700
-** Up to 720p 
+* Teradek VidiU: Up to 1080p - $700
+* Cerevo LiveShell: SD quality only - $250
+* Cerevo LiveShell Pro: Up to 720p - $700
 
 The following products are vendor-locked so you cannot use them with your own RTMP server:
 
-* Livestream Broadcaster - $500
-** Up to 720p
+* Livestream Broadcaster: Up to 720p - $500
 
 This document will not further discuss how to use this solution as it is pretty straight-forward and we opted to go for software encoding.
 
@@ -66,8 +62,8 @@ This document will not further discuss how to use this solution as it is pretty 
 
 There are two options here: 
 
-*The Raspberry Pi with the Raspberry Pi camera
-*A camcorder with built in wifi streaming.
+* The Raspberry Pi with the Raspberry Pi camera
+* A camcorder with built in wifi streaming.
 
 The Raspberry Pi is actually pretty amazing. Its built-in encoding + the fact that it runs linux means that it has amazing flexibility. On top of that it is super cheap. Unfortunately the only camera available doesn't have a very high quality sensor. It doesn't come with any decent optics, so you have to basically build a camera house and add your own optics, but the sensor is tiny so capturing enough light in anything but full daylight is near impossible (it will automatically reduce frame-rate when in low light) and good finding any optics that don't introduce an insance zoom factor.
 
@@ -95,7 +91,7 @@ You could also have two encoders and then figure out how to switch in software, 
 
 The professional solution is to convert HDMI to the more professional SDI at the camera, but the converter is expensive:
 
-*[Black Magic Mini Converter HDMI to SDI 4K - $300](https://www.blackmagicdesign.com/products/miniconverters)
+* [Black Magic Mini Converter HDMI to SDI 4K - $300](https://www.blackmagicdesign.com/products/miniconverters)
 
 SDI cable seems to be similarly priced to HDMI cable. 
 
@@ -110,16 +106,16 @@ You can also get HDMI extenders that will send an HDMI signal up to about 300 fe
 
 ### Capturing the HDMI on a normal computer
 
-Black Magic Design has a few different devices for getting HDMI into a computer. One device is USB3 for windows and another is Thunderbolt for Mac. There are also other cheaper products like the [http://hauppauge.com/site/products/data_hdpvr2-gaming.html Hauppauge HD PVR 2] which also does encoding, but none of these devices are supported in Linux :(
+Black Magic Design has a few different devices for getting HDMI into a computer. One device is USB3 for windows and another is Thunderbolt for Mac. There are also other cheaper products like the [Hauppauge HD PVR 2](http://hauppauge.com/site/products/data_hdpvr2-gaming.html) which also does encoding, but none of these devices are supported in Linux :(
 
-The only device with HDMI input and linux support seems to be the [https://www.blackmagicdesign.com/products/decklink Black Magic Design DeckLink Mini Recorder] which is a PCI Express card. At $145 it is fairly affordable.
+The only device with HDMI input and linux support seems to be the [Black Magic Design DeckLink Mini Recorder](https://www.blackmagicdesign.com/products/decklink) which is a PCI Express card. At $145 it is fairly affordable.
 
 ### Encoding content 
 
 We'll use:
 
-*To capture: [bmdtools](https://github.com/lu-zero/bmdtools)
-*To encode and stream to server: [libav 10][https://libav.org/download.html] with x264 (H.264 encoder library) and faac (AAC encoder library)
+* To capture: [bmdtools](https://github.com/lu-zero/bmdtools)
+* To encode and stream to server: [libav 10](https://libav.org/download.html) with x264 (H.264 encoder library) and faac (AAC encoder library)
 
 We're using bmdtools to capture from the Camera. You'll need a copy of the Black Magic Design DeckLink SDK (sometimes referred to as the Desktop Recorder SDK) which contains the header files. You can download this from the Black Magic Design website (Their site sucks for this. Just go to their downloads page use your browser's built-in search function to find the SDK download link).
 
@@ -131,9 +127,9 @@ The server simply accepts an incoming RTMP stream and forwards to every client t
 
 ## Hardware and bandwidth
 
-A VPS with 100 mbit unlimited bandwidth (enough for ~80 simultaneous dvd-quality stream) is only [http://www.vpscheap.net/enterprise-vds.aspx $17 per month].
+A VPS with 100 mbit unlimited bandwidth (enough for ~80 simultaneous dvd-quality stream) is only [$17 per month](http://www.vpscheap.net/enterprise-vds.aspx).
 
-Compare to [https://www.ustream.tv/platform/plans $99 per month for 100 ad-free viewer hours].
+Compare to [$99 per month for 100 ad-free viewer hours](https://www.ustream.tv/platform/plans).
 
 ## Server software 
 
