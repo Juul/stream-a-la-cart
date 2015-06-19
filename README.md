@@ -243,6 +243,10 @@ I recommend buying the adapters, HDMI splitter, HDMI extender, etc. on ebay or d
 
 # Planned improvements
 
+## Improved switching speed
+
+HDMI has this amazingly stupid built-in copy-protection which causes a delay every time the input is switched while the devices ensure that you're not trying to make a copy of the newest Disney BluRay. There are fast switchers that get around this delay, but they are very very expensive. If it turns out that the delay is too annoying then the cheap solution is probably to use HDMI to DVI adapters to turn both sources into DVI, then use a DVI input switcher, and finally a DVI to HDMI adapter for the switcher output. Super hacky but it should switch instantly and cost less than $50 total.
+
 ## Improved camera HDMI connection
 
 HDMI ports are not the best for a production environment. It is easy to accidentally unplug the cables or pull them sideways in a way that ruins the plug or port. The RedMere HDMI cables from Monoprice help a lot since the thinner and more flexible cables put less strain on the connectors. 
