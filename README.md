@@ -36,6 +36,12 @@ WebRTC is the future of live streaming. It uses VP8 and Ogg Vorbis which are 100
 
 All of this means that we are stuck with H.264 + AAC + RTMP + Flash until we the WebRTC software matures. This is do-able since open source implementations of everything we need is available. You might be breaking the law if you compile the code and redistribute the resulting binaries, but I'll leave that up to your judgment as I am not a lawyer.
 
+# Hand-held recording
+
+Most of this document describes a solution that doesn't work with a hand-held camera that needs to move around a lot. For this it's necessary to either get one of the battery-powered dedicated encoders mention in the next section (the VidiU Mini is a good bet) or use a smartphone. If using a smartphone it is probably a good idea to get a cage/grip for the phone and a wide angle and/or fisheye lens for close-ups. This is all availabe from [BeastGrip](http://beastgrip.com/).
+
+The cool thing about using a smartphone is that it's cheap (people can use their own phones) and it should be possible to use WebRTC soon. The problem with using smartphones is that you get no image stabilization, which can be a big problem. However, with the beastgrip it's possible to mount to a monopod or even a glidecam (you can find knock-off glidecams for ~$130 on ebay) which helps a lot.
+
 # Encoding (HDMI to RTMP stream)
 
 There are three basic ways of tackling encoding:
@@ -49,12 +55,13 @@ There are three basic ways of tackling encoding:
 These are all encoders that can take a HDMI input, encode it using H.264 and send an RTMP stream over ethernet to a user-specified RTMP server. Some or all of these may rely on cloud services to be configured (need to investigate).
 
 * Teradek VidiU: Up to 1080p - $700
+* Teradek VidiU Mini (wifi only): Up to 1080p - $500
 * Cerevo LiveShell: SD quality only - $250
 * Cerevo LiveShell Pro: Up to 720p - $700
 
 The following products are vendor-locked so you cannot use them with your own RTMP server:
 
-* Livestream Broadcaster: Up to 720p - $500
+* Livestream Broadcaster Mini (wifi only): Up to 1080p  - $280
 
 This document will not further discuss how to use this solution as it is pretty straight-forward and we opted to go for software encoding.
 
